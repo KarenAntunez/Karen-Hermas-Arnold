@@ -1,0 +1,64 @@
+<!-- Compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</link>
+<!-- Minified JS library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--LISTADO_PRODUCTOS-->
+<div class="m-3 p-3" style="width: 520px;  float:left;">
+    <div class="carousel">
+
+        <div class="card">
+            <div class="centrado card-header bg-success">
+                <h5>{producto}</h5>
+            </div>
+            <div class="card-body shadow rounded">
+                <div class="row" style="height:250px;">
+                    <div class="col-xs-12 col-sm-4">
+                        <h6>{descripcion}</h6>
+                    </div>
+                    <div class="col-xs-12  col-sm-8 images" id="divImages_{id}">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!--?php  
+                                código 
+                                ?-->
+                                <button id="retroceder">Retroceder</button>
+                                <input type="hidden" value="{imagenes}" id="{id}" class="hidden_images">
+                                <button id="avanzar">Avanzar</button>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12  col-sm-4 centrado">
+                        <strong>Precio unitario</strong><br>
+                        <h4>${precio}</h4>
+                    </div>
+                    <div class="col-xs-12  col-sm-8 derecho">
+                        <strong>Cantidad: </strong><input type="number" id="{id}" value="1" size="3" />
+                        <a href="/artesanias/pedido/agregar"> <img src="/static/img/canasto.png" width="25px"
+                                alt="canasto">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--LISTADO_PRODUCTOS-->
+<script src="/static/js/productos_listar.js"></script>

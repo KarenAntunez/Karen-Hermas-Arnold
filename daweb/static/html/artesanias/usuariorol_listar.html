@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header bg-success">
+        <h5>Listado de usuarios y sus roles</h5>
+    </div>
+    <div class="card-body shadow rounded">
+        <table class="table table-hover table-bordered">
+            <caption>Pág. 1 </caption>
+            <thead class="thead-light ">
+                <tr>
+                    <th scope="col">USUARIO</th>
+                    <th scope="col">ROL</th>
+                    <th scope="col" colspan="2">ACCION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--LISTADO_ROLES-->
+                <tr>
+                    <td>{usuario_id}</td>
+                    <td>{rol_id}</td>
+                    <td>
+                        <a href="/artesanias/roles/editar/{id}">
+                            <img src="/static/img/edit.png" width="48" alt="edit" title="Editar el elemento actual " />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/artesanias/roles/eliminar/{id}"
+                            onclick="return confirm( 'Esta seguro de Borrar {descripcion}') ">
+                            <img src="/static/img/delet.png" width="48" alt="delete"
+                                title="Borrar el elemento actual " />
+                        </a>
+                    </td>
+                </tr>
+                <!--LISTADO_ROLES-->
+            </tbody>
+        </table>
+        <div class="card-body shadow rounded">
+            <form action="/artesanias/roles/agregar" method="POST">
+                <div style="text-align: center;">
+                    <input type="submit" class="btn btn-primary" value="Agregar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
